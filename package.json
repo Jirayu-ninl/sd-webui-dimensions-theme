@@ -4,14 +4,12 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/canisminor1990/sd-webui-kitchen-theme.git"
+    "url": "https://github.com/Jirayu-ninl/SD-Theme-Dimensions.git"
   },
-  "license": "MIT",
-  "author": "canisminor1990 <i@canisminor.cc>",
   "sideEffects": false,
   "scripts": {
     "build": "umi build",
-    "dev": "umi build",
+    "dev": "umi dev",
     "lint": "eslint \"{src,javascript}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\" && npm run lint && npm run stylelint",
@@ -65,7 +63,6 @@
     "eslint": "^8",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^3.5.5",
-    "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "object-to-css-variables": "^0.2.1",
     "polished": "^4.2.2",
