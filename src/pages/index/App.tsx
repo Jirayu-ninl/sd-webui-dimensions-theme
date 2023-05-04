@@ -40,7 +40,7 @@ const App: React.FC = () => {
     (st) => [st.currentTab, st.setCurrentTab, st.setting],
     shallow
   )
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
   const headerRef: any = useRef<HTMLElement>()

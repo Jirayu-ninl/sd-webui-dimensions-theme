@@ -98,7 +98,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
     <>
       <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} isExpand={expand} onExpandChange={setExpand}>
         <HeaderView id="header" style={{ flexDirection: mobile ? 'column' : 'row' }}>
-          <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Jirayu-ninl/SD-Theme-Dimensions" target="_blank" rel="noreferrer">
             <Logo themeMode={themeMode} />
           </a>
           {children}

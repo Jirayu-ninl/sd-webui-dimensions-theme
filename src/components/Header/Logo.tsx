@@ -1,5 +1,5 @@
 import React from 'react'
-import { darkLogo, lightLogo } from './style'
+import { LogoMain } from './style'
 
 interface LogoProps {
   size?: number
@@ -8,7 +8,7 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ size = 20, style, themeMode }) => {
-  return <img src={themeMode === 'dark' ? darkLogo : lightLogo} alt="logo" style={{ height: size, ...style }} />
+  return <LogoMain theme={themeMode} />
 }
 
 export default React.memo(Logo)

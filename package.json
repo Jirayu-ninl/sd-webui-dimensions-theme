@@ -1,6 +1,6 @@
 {
-  "name": "sd-webui-kitchen-theme",
-  "version": "1.7.0",
+  "name": "sd-theme-dimensions",
+  "version": "1.0.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -10,15 +10,14 @@
   "scripts": {
     "build": "umi build",
     "dev": "umi dev",
+    "setup": "umi setup",
+    "start": "umi start",
     "lint": "eslint \"{src,javascript}/**/*.{js,jsx,ts,tsx}\" --fix",
-    "prepare": "husky install",
-    "prettier": "prettier -c --write \"**/**\" && npm run lint && npm run stylelint",
+    "prettier": "prettier -c --write \"**/**\" && yarn run lint && yarn run stylelint",
     "release": "semantic-release",
     "sd-debug": "cd ../../ && ./webui.sh",
-    "setup": "umi setup",
-    "start": "umi build",
     "stylelint": "stylelint \"src/**/*.{css,less,js,jsx,ts,tsx}\" --fix",
-    "test": "npm run lint",
+    "test": "yarn run lint",
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
