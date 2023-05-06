@@ -94,10 +94,10 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
       >
         <View>
           <SidebarView size={size}>{children}</SidebarView>
-          <Footer>
+          {/* <Footer>
             <ZoomInOutlined />
             <ZoomSlider defaultValue={size} step={8} max={256} min={64} onChange={setSize} />
-          </Footer>
+          </Footer> */}
         </View>
       </DraggablePanel>
     </>

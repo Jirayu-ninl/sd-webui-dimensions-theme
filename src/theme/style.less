@@ -40,14 +40,19 @@
 
 /* Root */
 
+#root {
+  // background-image: var(--color-body-background);
+  background-image: url(https://i0.wp.com/512pixels.net/wp-content/uploads/2019/10/10-14-Mojave-14.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--color-text);
   text-size-adjust: 100%;
-
-  background-image: var(--color-body-background);
-  background-repeat: no-repeat;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,4 +95,45 @@ h5 {
 
 a {
   text-decoration: none;
+}
+
+#content {
+  height: 100%;
+  #tabs.tabs.gradio-tabs.svelte-1g805jl > div {
+    padding: 0px !important;
+  }
+}
+
+.gradio-container.gradio-container-3-28-1.svelte-1mya07g.app {
+  height: 100%;
+  > .main.svelte-1mya07g {
+    height: 100%;
+    > .wrap.svelte-1lyswbr {
+      height: 100%;
+      > .contain {
+        overflow: scroll;
+        height: 100%;
+        > .svelte-vt1mxs {
+          overflow: hidden;
+          height: 100%;
+          > #tabs.tabs.gradio-tabs.svelte-1g805jl {
+            overflow: scroll;
+            height: 100%;
+          }
+          > #footer.block.gradio-html.svelte-mppz8v.padded {
+            padding: 0px !important;
+            > .svelte-1ed2p3z {
+              width: 100%;
+              > .prose.gradio-html.svelte-1ybaih5 {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

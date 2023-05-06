@@ -51,7 +51,11 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       css`
         position: relative;
         flex-shrink: 0;
-        border: 0 solid ${token.colorSplit};
+        // border: 0 solid ${token.colorSplit};
+        border: 1px solid rgba(253, 253, 253, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 4px 16px;
         &:hover {
           .${prefix}-toggle {
             opacity: 1;
@@ -128,8 +132,8 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       css`
         position: relative;
         overflow: hidden;
-        background: ${rgba(token.colorBgContainer, 0.75)};
-        backdrop-filter: blur(40px);
+        background: ${rgba(token.colorBgContainer, 0.2)};
+        backdrop-filter: blur(20px);
 
         ${maxHeight ? 'height: 100% !important;' : ''}
       `
@@ -142,8 +146,8 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
 
         overflow: hidden;
 
-        background: ${rgba(token.colorBgElevated, 0.75)};
-        backdrop-filter: blur(40px);
+        background: ${rgba(token.colorBgElevated, 0.2)};
+        backdrop-filter: blur(20px);
         border-radius: 8px;
         box-shadow: ${token.boxShadowSecondary};
       `

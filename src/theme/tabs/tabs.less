@@ -1,3 +1,4 @@
+/* stylelint-disable order/properties-order */
 .tabitem,
 .gradio-tabitem {
   padding: var(--spacing-lg);
@@ -20,12 +21,9 @@
 
   button {
     cursor: pointer;
-
     flex: 1 !important;
-
     padding: 8px !important;
-
-    background: var(--color-fill-quaternary) !important;
+    background-color: #FFFFFF10 !important;
     border: none !important;
     border-radius: 4px !important;
 
@@ -34,7 +32,7 @@
     &:hover {
       flex: none;
       color: var(--color-text) !important;
-      background: var(--color-fill-tertiary) !important;
+      background: #FFFFFF50 !important;
       border: none !important;
     }
 
@@ -46,7 +44,29 @@
 
       background: var(--color-fill-secondary) !important;
       border: none !important;
-      border-bottom: 2px solid var(--color-primary) !important;
+      border-bottom: 2px solid #FFF !important;
+      background-color: #FFFFFF30 !important;
+    }
+  }
+}
+
+.header {
+  > .tab-nav {
+    padding: 0 32px;
+    justify-content: center;
+  }
+}
+
+.fPlJgX #tabs.header {
+  button {
+    border: none !important;
+    background-color: #FFFFFF10 !important;
+    &.selected {
+      border-bottom: 2px solid #FFF !important;
+      background-color: #FFFFFF30 !important;
+    }
+    &:hover {
+      background: #FFFFFF50 !important;
     }
   }
 }

@@ -7,6 +7,12 @@ const ContentView = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   flex: 1;
+  background: rgba(20, 20, 20, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(253, 253, 253, 0.1);
+  margin: 4px 0px;
+  border-radius: 12px;
 `
 
 interface ContentProps {

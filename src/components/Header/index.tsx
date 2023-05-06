@@ -26,6 +26,7 @@ const HeaderView = styled.div`
   height: -webkit-fill-available;
   height: -moz-available;
   padding: 16px 24px;
+  
 
   #tabs.header {
     .tab-nav {

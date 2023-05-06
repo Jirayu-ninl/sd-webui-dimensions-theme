@@ -1,5 +1,11 @@
+/* stylelint-disable order/properties-order */
 #txt2img_extra_networks,
 #img2img_extra_networks {
+
+  .extra-network-cards {
+    height: 100%;
+  }
+
   .tabitem.gradio-tabitem.svelte-19hvt5v {
     padding: 0;
     background: transparent;
@@ -67,20 +73,22 @@
       display: none;
       > ul {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
 
         margin: 0;
         padding: 0;
         a {
-          margin: 0 !important;
-          padding: 0 !important;
-
-          font-size: 15px !important;
+          margin: 0 0 6px 0 !important;
+          padding: 4px;
+          font-size: 14px !important;
           color: #fff;
           text-overflow: ellipsis;
           text-shadow: 1px 1px black;
           white-space: nowrap;
+          background-color: #fff;
+          border-radius: 200px;
         }
       }
     }
@@ -91,22 +99,45 @@
 
     background-size: cover;
     border-radius: var(--border-radius-xs);
-    outline: 1px solid rgb(0 0 0 / 50%);
+    border-radius: 8px !important;
+    outline: none;
     box-shadow: var(--box-shadow);
-
-    transition: all 0.2s ease-in-out;
+    transition: all 250ms ease-in-out;
 
     .name {
       font-size: 12px !important;
     }
 
     &:hover {
-      outline: 2px solid var(--color-primary);
+      transform: translate3d(-5px, -5px, 0);
+      outline: none;
+      transition: all 150ms ease-in-out;
       .additional {
-        display: block;
+        transform: translate3d(0, 0, 0) !important;
+        transition-duration: 250ms !important;
       }
       .name {
         white-space: unset;
+      }
+    }
+
+    .actions {
+      text-shadow: none;
+      background: #00000080;
+      backdrop-filter: blur(10px);
+      box-shadow: none;
+
+      .additional {
+        display: block !important;
+        position: absolute;
+        bottom: 32px;
+        right: 8px;
+        transform: translate3d(30px, 0, 0);
+        transition: all 650ms ease-in-out;
+      }
+
+      .name {
+        background: none;
       }
     }
   }
@@ -119,6 +150,19 @@
 
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+.extra-network-cards {
+  .card {
+    width: 12em;
+    height: 18em;
+    &:hover {
+      box-shadow: none !important;
+    }
+    .actions:hover {
+      box-shadow: none !important;
     }
   }
 }

@@ -1,5 +1,48 @@
 #tab_txt2img,
 #tab_img2img {
+  height: 100%;
+  > .svelte-vt1mxs {
+    overflow: hidden;
+    height: 100%;
+    > .form.svelte-b6y5bg {
+      overflow: hidden;
+      height: 100%;
+    }
+    > .gradio-row.svelte-15lo0d8.unequal-height,
+    .form.svelte-b6y5bg > .gradio-row.svelte-15lo0d8.unequal-height {
+      overflow: hidden;
+      height: 100%;
+      > #txt2img_settings.gradio-column.svelte-vt1mxs.gap.compact,
+      #txt2img_results.gradio-column.svelte-vt1mxs.gap.panel,
+      #img2img_settings.gradio-column.svelte-vt1mxs.gap.compact,
+      #img2img_results.gradio-column.svelte-vt1mxs.gap.panel {
+        overflow: scroll;
+        flex-wrap: nowrap;
+        height: 100%;
+      }
+      > #txt2img_settings.gradio-column.svelte-vt1mxs.gap.compact,
+      #img2img_settings.gradio-column.svelte-vt1mxs.gap.compact {
+        flex-grow: 0;
+        max-width: 512px;
+      }
+    }
+  }
+
+  #txt2img_toprow,
+  #img2img_toprow {
+    #txt2img_prompt_container,
+    #img2img_prompt_container {
+      .block.token-counter {
+        bottom: -0.75em;
+      }
+    }
+    > .gradio-column.interrogate-col.svelte-vt1mxs.gap {
+      > button {
+        font-size: 12px;
+      }
+    }
+  }
+
   #txt2img_settings,
   #img2img_settings {
     .block.gradio-checkbox {

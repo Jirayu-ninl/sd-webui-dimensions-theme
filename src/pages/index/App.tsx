@@ -5,6 +5,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { shallow } from 'zustand/shallow'
 
+const HeaderStyle = styled.div`
+  padding-top: 12px;
+`
+
 const View = styled.div`
   position: relative;
 
@@ -12,6 +16,7 @@ const View = styled.div`
   display: flex;
   flex: 1;
   flex-direction: row !important;
+  padding-bottom: 12px;
 `
 
 const MainView = styled.div`
@@ -40,7 +45,7 @@ const App: React.FC = () => {
     (st) => [st.currentTab, st.setCurrentTab, st.setting],
     shallow
   )
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
   const headerRef: any = useRef<HTMLElement>()
@@ -82,14 +87,16 @@ const App: React.FC = () => {
 
   return (
     <MainView>
-      <Header>
-        {loading && (
-          <LoadingBox>
-            <Spin size="small" />
-          </LoadingBox>
-        )}
-        <div ref={headerRef} className="header" />
-      </Header>
+      <HeaderStyle>
+        <Header>
+          {loading && (
+            <LoadingBox>
+              <Spin size="small" />
+            </LoadingBox>
+          )}
+          <div ref={headerRef} className="header" />
+        </Header>
+      </HeaderStyle>
       <View>
         <Sidebar>
           {loading && (

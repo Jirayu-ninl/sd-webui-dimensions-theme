@@ -27,7 +27,7 @@ export const defaultSetting: WebuiSetting = {
   sidebarWidth: 280,
   enableExtraNetworkSidebar: true,
   extraNetworkSidebarExpand: true,
-  extraNetworkSidebarWidth: 340,
+  extraNetworkSidebarWidth: 400,
   extraNetworkCardSize: 86,
 }
 export const useAppStore = create<AppState>()(
