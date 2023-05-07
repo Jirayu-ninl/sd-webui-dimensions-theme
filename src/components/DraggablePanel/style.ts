@@ -136,6 +136,9 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         backdrop-filter: blur(20px);
 
         ${maxHeight ? 'height: 100% !important;' : ''}
+
+        border-radius: 12px;
+        overflow: hidden;
       `
     ),
     float: cx(
