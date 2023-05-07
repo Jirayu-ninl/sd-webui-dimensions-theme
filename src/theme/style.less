@@ -26,7 +26,7 @@
 @import 'tabs/tabs';
 @import 'tabs/tab-to-img';
 @import 'tabs/tab-setting';
-@import 'tabs/tab-extra';
+@import 'tabs/tab-others';
 
 /* Extensions */
 @import 'extensions/aspect-ratio';
@@ -100,7 +100,20 @@ a {
 #content {
   height: 100%;
   #tabs.tabs.gradio-tabs.svelte-1g805jl > div {
+    height: 100%;
     padding: 0px !important;
+    > .svelte-vt1mxs.gap {
+      height: 100%;
+      > .gradio-row.svelte-15lo0d8.unequal-height {
+        overflow: hidden;
+        height: 100%;
+        > div {
+          overflow: scroll;
+          flex-wrap: nowrap;
+          height: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -138,6 +151,15 @@ a {
   }
 }
 
+// Bugs
+
+.wrap.svelte-1g4zxts.svelte-1g4zxts.svelte-1g4zxts:focus-within {
+  > ul {
+    height: 160px !important;
+    overflow: scroll !important;
+  }
+}
+
 // ExpandablePanel
 
 .anticon.anticon-left,
@@ -147,4 +169,3 @@ a {
   width: 100% !important;
   height: 100% !important;
 }
-
