@@ -92,13 +92,12 @@
     grid-template-columns: repeat(3, 1fr);
     > div:nth-child(4) {
       grid-column-start: 3;
-      grid-row-start: 1;
-      grid-row-end: 2;
+      grid-row: 1 / span 2;
     }
   }
 }
 
-#tab_3dmodel_loadortab_3dmodel_loador {
+#tab_3dmodel_loador {
   .gradio-row.svelte-15lo0d8 {
     height: 100%;
     > div {
@@ -130,13 +129,13 @@
         height: 100% !important;
         overflow: scroll;
         padding-left: 12px !important;
-        .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.Mui-expanded.MuiAccordion-gutters.css-67l5gl {
+        .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-67l5gl {
           background-color: #ffffff10 !important;
           color: #fff !important;
           .MuiAccordionSummary-expandIconWrapper.Mui-expanded.css-1fx8m19 {
             color: #fff;
           }
-          MuiFormControl-root.MuiFormControl-fullWidth.css-1v4btwe {
+          .MuiFormControl-root.MuiFormControl-fullWidth.css-1v4btwe {
             > label {
               color: #fff !important;
             }
@@ -150,5 +149,66 @@
         }
       }
     }
+
+    .css-exkjcx {
+      color: #fff !important;
+    }
+    .css-zun73v {
+      color: rgb(255 255 255 / 20%);
+      &.Mui-checked,
+      &.MuiCheckbox-indeterminate {
+        color: #fff;
+      }
+    }
+  }
+
+  button[type='button'] {
+    background-color: #ffffff10 !important;
   }
 }
+
+#tab_depth_lib {
+  > div > div {
+    height: 100%;
+    overflow: hidden;
+    > div {
+      overflow: scroll;
+      flex-wrap: nowrap;
+      height: 100%;
+      &:first-child {
+        display: grid;
+        grid-template-columns: auto 240px;
+        > div:last-child {
+          grid-column-start: 1;
+          grid-row: 1 / span 4;
+          flex-direction: column-reverse;
+          height: 100%;
+          overflow: hidden;
+          flex-wrap: nowrap;
+          > div:first-child {
+            height: calc(100% - 320px);
+            overflow: scroll;
+          }
+        }
+      }
+      &:last-child {
+        //  max-width: 512px !important;
+        height: auto !important;
+      }
+    }
+  }
+}
+
+// #tab_infinite-image-browsing {
+//   body {
+//     background-color: transparent !important;
+//   }
+//   :root body.dark {
+//     --zp-primary-background: #ffffff10;
+//   }
+//   .splitpanes__pane {
+//     .ant-tabs-nav {
+//       background: transparent !important;
+//     }
+//   }
+// }
