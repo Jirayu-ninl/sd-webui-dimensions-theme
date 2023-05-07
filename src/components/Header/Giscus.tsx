@@ -8,7 +8,7 @@ const Giscus: React.FC<GiscusProps> = ({ themeMode }) => {
     // giscus
     const giscus: HTMLScriptElement = document.createElement('script')
     giscus.src = 'https://giscus.app/client.js'
-    giscus.setAttribute('data-repo', 'canisminor1990/sd-webui-kitchen-theme')
+    giscus.setAttribute('data-repo', 'Jirayu-ninl/SD-Theme-Dimensions')
     giscus.setAttribute('data-repo-id', 'R_kgDOJCPcNg')
     giscus.setAttribute('data-mapping', 'number')
     giscus.setAttribute('data-term', '53')

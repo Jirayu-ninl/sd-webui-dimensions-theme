@@ -1,13 +1,13 @@
 import { DraggablePanel } from '@/components'
 import { useAppStore } from '@/store'
 import { BoldOutlined, GithubOutlined } from '@ant-design/icons'
-import { Button, Modal, Space } from 'antd'
+import { Button, Modal } from 'antd'
 import { useResponsive } from 'antd-style'
 import qs from 'query-string'
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { shallow } from 'zustand/shallow'
-import Giscus from './Giscus'
+// import Giscus from './Giscus'
 import Logo from './Logo'
 import Setting from './Setting'
 import { civitaiLogo, themeIcon } from './style'
@@ -26,7 +26,6 @@ const HeaderView = styled.div`
   height: -webkit-fill-available;
   height: -moz-available;
   padding: 16px 24px;
-  
 
   #tabs.header {
     .tab-nav {
@@ -66,6 +65,25 @@ const HeaderView = styled.div`
   }
 `
 
+const ShortcutIcon = styled.div`
+  display: inline-flex;
+  button {
+    padding: 4px;
+    margin-left: 4px;
+    color: #FFFFFFd5 !important;
+    background-color: #ffffff10 !important;
+    border-color: #424242 !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(20px);
+    transition-duration: 450ms;
+    &:hover {
+      color: #FFFFFFd5 !important;
+      background-color: #FFFFFF50 !important;
+      transition-duration: 150ms;
+    }
+  }
+`
+
 /******************************************************
  ************************* Dom *************************
  ******************************************************/
@@ -99,29 +117,32 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
     <>
       <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} isExpand={expand} onExpandChange={setExpand}>
         <HeaderView id="header" style={{ flexDirection: mobile ? 'column' : 'row' }}>
-          <a href="https://github.com/Jirayu-ninl/SD-Theme-Dimensions" target="_blank" rel="noreferrer">
+          <a href="https://Dimensions.TheIceJi.com" target="_blank" rel="noreferrer">
             <Logo themeMode={themeMode} />
           </a>
           {children}
-          <Space.Compact>
+          <ShortcutIcon>
             <a href="https://civitai.com/" target="_blank" rel="noreferrer">
               <Button title="Civitai" icon={civitaiLogo} />
             </a>
             <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
               <Button title="Birme" icon={<BoldOutlined />} />
             </a>
-            <Button title="Feedback" icon={<GithubOutlined />} onClick={showModal} />
+            {/* <Button title="Feedback" icon={<GithubOutlined />} onClick={showModal} /> */}
+            <a href="https://github.com/Jirayu-ninl/SD-Theme-Dimensions" target="_blank" rel="noreferrer">
+              <Button title="Github" icon={<GithubOutlined />} />
+            </a>
             <Setting />
-            <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
-          </Space.Compact>
+            {/* <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} /> */}
+          </ShortcutIcon>
         </HeaderView>
       </DraggablePanel>
-      <Modal
+      {/* <Modal
         title={
-          <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Jirayu-ninl/SD-Theme-Dimensions" target="_blank" rel="noreferrer">
             <Space>
               <GithubOutlined />
-              {'canisminor1990/sd-webui-kitchen-theme'}
+              {'Jirayu-ninl/SD-Theme-Dimensions'}
             </Space>
           </a>
         }
@@ -130,7 +151,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
         footer={null}
       >
         <Giscus themeMode={themeMode} />
-      </Modal>
+      </Modal> */}
     </>
   )
 }
