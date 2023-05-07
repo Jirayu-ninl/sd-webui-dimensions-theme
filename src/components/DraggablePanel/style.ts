@@ -14,7 +14,8 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
     &:hover,
     &:active {
       &::before {
-        background: ${token.colorPrimary};
+        background: #ffffff70;
+        box-shadow: #fff 0px 0px 8px, #fff 0px -6px 16px, #fff 0px -24px 60px;
       }
     }
   `
@@ -25,25 +26,28 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
     position: absolute;
     z-index: 1001;
 
-    color: ${token.colorTextTertiary};
+    color: rgba(255, 255, 255, 0.75);
 
-    opacity: 0;
-    background: ${token.colorBgElevated};
+    opacity: 1;
+    background: #ffffff30;
     border-color: ${token.colorBorder};
     border-style: solid;
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 60px;
+    padding: 4px;
 
     transition: opacity 0.1s;
+    transition-duration: 350ms;
     &:hover {
       color: ${token.colorTextSecondary};
-      background: ${token.colorFillQuaternary};
+      background: rgba(255, 255, 255, 0.3);
+      transition-duration: 150ms;
     }
   `
 
-  const offset = 17
-  const toggleLength = 40
-  const toggleShort = 16
+  const offset = 6
+  const toggleLength = 10
+  const toggleShort = 10
 
   return {
     container: cx(
@@ -52,15 +56,15 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         position: relative;
         flex-shrink: 0;
         // border: 0 solid ${token.colorSplit};
-        border: 1px solid rgba(253, 253, 253, 0.1);
+        // border: 1px solid rgba(253, 253, 253, 0.1);
         border-radius: 12px;
-        overflow: hidden;
+        // overflow: hidden;
         margin: 4px 16px;
-        &:hover {
-          .${prefix}-toggle {
-            opacity: 1;
-          }
-        }
+        // &:hover {
+        //   .${prefix}-toggle {
+        //     opacity: 1;
+        //   }
+        // }
       `
     ),
     toggleLeft: cx(
@@ -68,15 +72,14 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-left`,
       commonToggle,
       css`
-        top: 50%;
-        left: -${offset}px;
+        top: 6px;
+        left: ${offset}px;
 
         width: ${toggleShort}px;
         height: ${toggleLength}px;
-        margin-top: -20px;
 
         border-right-width: 0;
-        border-radius: 4px 0 0 4px;
+        border-radius: 60px;
       `
     ),
     toggleRight: cx(
@@ -84,15 +87,14 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-right`,
       commonToggle,
       css`
-        top: 50%;
-        right: -${offset}px;
+        top: 6px;
+        right: ${offset}px;
 
         width: ${toggleShort}px;
         height: ${toggleLength}px;
-        margin-top: -20px;
 
         border-left-width: 0;
-        border-radius: 0 4px 4px 0;
+        border-radius: 60px;
       `
     ),
     toggleTop: cx(
@@ -105,10 +107,9 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
 
         width: ${toggleLength}px;
         height: ${toggleShort}px;
-        margin-left: -20px;
 
         border-bottom-width: 0;
-        border-radius: 4px 4px 0 0;
+        border-radius: 60px;
       `
     ),
     toggleBottom: cx(
@@ -116,15 +117,14 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-bottom`,
       commonToggle,
       css`
-        bottom: -${offset}px;
-        left: 50%;
+        bottom: ${offset}px;
+        right: 6px;
 
         width: ${toggleLength}px;
-        height: 16px;
-        margin-left: -20px;
+        height: ${toggleShort}px;
 
         border-top-width: 0;
-        border-radius: 0 0 4px 4px;
+        border-radius: 60px;
       `
     ),
     fixed: cx(
@@ -157,7 +157,7 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         ${commonHandle};
         &::before {
           left: 50%;
-          width: 2px;
+          width: 1px;
           height: 100%;
         }
       `,
@@ -168,7 +168,7 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         ${commonHandle};
         &::before {
           right: 50%;
-          width: 2px;
+          width: 1px;
           height: 100%;
         }
       `,
@@ -181,7 +181,7 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         &::before {
           top: 50%;
           width: 100%;
-          height: 2px;
+          height: 1px;
         }
       `
     ),
@@ -192,7 +192,7 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         &::before {
           bottom: 50%;
           width: 100%;
-          height: 2px;
+          height: 1px;
         }
       `
     ),

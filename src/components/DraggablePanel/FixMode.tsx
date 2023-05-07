@@ -209,7 +209,12 @@ export const FixMode: FC<FixModePanelProps> = memo<FixModePanelProps>(
     }, [styles, placement])
 
     return (
-      <div className={cx(styles.container, className)} style={{ [`border${arrowPlacement}Width`]: 1 }}>
+      <div
+        className={cx(styles.container, className)}
+        style={{
+          border: isExpand ? '1px solid rgba(253, 253, 253, 0.1)' : 'none',
+        }}
+      >
         {expandable && (
           <Center
             // @ts-ignore
