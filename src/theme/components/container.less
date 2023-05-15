@@ -1,6 +1,25 @@
 #content {
   min-height: -webkit-fill-available;
   min-height: -moz-available;
+  > div {
+    height: 100%;
+    > div {
+      height: 100%;
+      > div {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.contain {
+  height: 100%;
+  > div {
+    height: 100%;
+    > div {
+      height: calc(100% - 24px);
+    }
+  }
 }
 
 .app.svelte-ac4rv4.svelte-ac4rv4 {
